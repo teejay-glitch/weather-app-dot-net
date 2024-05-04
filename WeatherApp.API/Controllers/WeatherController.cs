@@ -24,7 +24,7 @@ namespace WeatherApp.Controllers
                 return Ok(new { success = true, message = "Data received.", data = weatherData });
             } catch (Exception ex)
             {
-                return Ok(new { success = false, message = "Failed to fetch data", error = ex.Message });
+                return BadRequest(new { success = false, message = "Failed to fetch data", error = ex.Message });
             }
         }
     }
