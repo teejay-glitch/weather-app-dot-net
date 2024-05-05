@@ -12,7 +12,7 @@ namespace WeatherApp.Utility
         private static readonly string apiKey = ConfigurationHelper._configuration.GetSection("WeatherApiKey:ApiKey").Value;
         public static string GetWeatherUrl(double latitude, double longitude)
         {
-            return $"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={apiKey}";
+            return $"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&units=metric&appid={apiKey}";
         }
     }
 }
